@@ -121,7 +121,7 @@ async def run_agent(
 
     while True:
         response = await client.messages.create(
-            model="claude-sonnet-4-6-latest",
+            model="claude-sonnet-4-6",
             max_tokens=1024,
             system=SYSTEM_PROMPT,
             tools=TOOLS,
