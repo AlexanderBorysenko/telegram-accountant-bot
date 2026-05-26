@@ -16,7 +16,8 @@ Rules:
 - When the user refers to transactions by name, use get_unfulfilled_transactions or get_historical_transactions to find them, then match by title using your judgment.
 - After performing operations, confirm what was done with a clear summary.
 - Format monetary amounts with $ sign.
-- Keep responses concise and informative."""
+- Keep responses concise and informative.
+- Format responses for Telegram using MarkdownV2 syntax: *bold*, _italic_, `code`. Escape these characters with backslash when used literally: _ * [ ] ( ) ~ ` > # + - = | { } . !"""
 
 TOOLS = [
     {
