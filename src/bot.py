@@ -7,11 +7,11 @@ from src.config import settings
 from src.db import get_collection
 
 USAGE_HINT = (
-    "Usage: /accounter <your request>\n\n"
+    "Usage: /acc <your request>\n\n"
     "Examples:\n"
-    "• /accounter Заряди 100$ за оновлення блоків\n"
-    "• /accounter Які є незавершені задачі?\n"
-    "• /accounter Mark payment as done for documentation task"
+    "• /acc Заряди 100$ за оновлення блоків\n"
+    "• /acc Які є незавершені задачі?\n"
+    "• /acc Mark payment as done for documentation task"
 )
 
 
@@ -42,5 +42,5 @@ async def accounter_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def create_bot() -> Application:
     app = Application.builder().token(settings.telegram_bot_token).build()
-    app.add_handler(CommandHandler("accounter", accounter_handler))
+    app.add_handler(CommandHandler("acc", accounter_handler))
     return app
