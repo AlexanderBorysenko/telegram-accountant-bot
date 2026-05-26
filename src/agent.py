@@ -30,9 +30,11 @@ Single transaction:
 
 Transaction list:
 1. Title — $amount
-   💼 ⏳ · 💰 ✅
+   💼 Job - ⏳ 
+   💰 Pay - ✅
 2. Title — $amount
-   💼 ⏳ · 💰 ⏳
+   💼 Job - ⏳
+   💰 Pay - ⏳
 
 Total: $amount
 
