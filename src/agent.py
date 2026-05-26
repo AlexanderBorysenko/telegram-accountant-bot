@@ -15,9 +15,28 @@ Rules:
 - To fulfill a transaction, use update_transaction to set both statuses to "done".
 - When the user refers to transactions by name, use get_unfulfilled_transactions or get_historical_transactions to find them, then match by title using your judgment.
 - After performing operations, confirm what was done with a clear summary.
-- Format monetary amounts with $ sign.
 - Keep responses concise and informative.
-- Format responses for Telegram using MarkdownV2 syntax: *bold*, _italic_, `code`. Escape these characters with backslash when used literally: _ * [ ] ( ) ~ ` > # + - = | { } . !"""
+
+Response format (follow strictly, never use Markdown, tables, or bold):
+- Use plain text with emojis only.
+- Emojis: 📌 title, 💰 payment, 💼 job, ⏳ pending, ✅ done.
+
+Single transaction:
+✅ <short action summary>
+
+📌 Title — $amount
+💼 ⏳ pending
+💰 ✅ done
+
+Transaction list:
+1. Title — $amount
+   💼 ⏳ · 💰 ✅
+2. Title — $amount
+   💼 ⏳ · 💰 ⏳
+
+Total: $amount
+
+Add a one-line summary at the end if useful. Never deviate from this format."""
 
 TOOLS = [
     {
